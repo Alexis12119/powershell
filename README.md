@@ -2,6 +2,11 @@
 
 ## Powershell Setup
 
+* Clone this repository
+```git
+git clone https://github.com/Alexis12119/powershell.git %userprofile%\.config\powershell
+```
+
 * [Scoop](https://scoop.sh/) - A command-line installer
 
 **NOTE:** Use Only [PowerShell](https://docs.microsoft.com/en-us/powershell/scripting/install/installing-powershell-on-windows?view=powershell-7.2) (version 5.1 or later). 
