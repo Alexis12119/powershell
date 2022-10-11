@@ -4,7 +4,7 @@
 
 * Clone this repository
 ```git
-git clone https://github.com/Alexis12119/powershell.git %userprofile%\.config\powershell
+git clone https://github.com/Alexis12119/powershell.git .config\powershell
 ```
 
 * [Scoop](https://scoop.sh/) - A command-line installer
