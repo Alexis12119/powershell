@@ -11,7 +11,7 @@ Import-Module -Name Terminal-Icons
 Import-Module PSFzf
 Set-PsFzfOption -PSReadlineChordProvider 'Ctrl+f' -PSReadlineChordReverseHistory 'Ctrl+r'
 
-oh-my-posh init pwsh --config "$env:POSH_THEMES_PATH\the-unnamed.omp.json" | Invoke-Expression
+oh-my-posh init pwsh --config "$env:POSH_THEMES_PATH\dull.json" | Invoke-Expression
 
 function which ($command) {
     Get-Command -Name $command -ErrorAction SilentlyContinue |
