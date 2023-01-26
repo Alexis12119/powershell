@@ -6,7 +6,7 @@
 ```git
 git clone https://github.com/Alexis12119/powershell.git .config\powershell
 ```
-**NOTE:** Put `dull.json` in the `$env:POSH_THEMES_PATH`
+**NOTE:** Put `nightly.json` in the `$env:POSH_THEMES_PATH`
 
 * [Scoop](https://scoop.sh/) - A command-line installer
 
