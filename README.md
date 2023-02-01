@@ -10,7 +10,7 @@ git clone https://github.com/Alexis12119/powershell.git .config\powershell
 
 * [Scoop](https://scoop.sh/) - A command-line installer
 
-**NOTE:** Use Only [PowerShell](https://docs.microsoft.com/en-us/powershell/scripting/install/installing-powershell-on-windows?view=powershell-7.2) (version 5.1 or later). 
+**NOTE:** Use Only [PowerShell](https://github.com/PowerShell/PowerShell) (version 5.1 or later). 
 
 ```sh
  Set-ExecutionPolicy RemoteSigned -Scope CurrentUser # Optional: Needed to run a remote script the first time
