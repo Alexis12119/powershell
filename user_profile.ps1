@@ -3,8 +3,8 @@ Set-PSReadLineOption -PredictionSource History
 Set-PSReadLineOption -PredictionViewStyle ListView
 # Shows navigable menu of all options when hitting Tab
 # Set-PSReadlineKeyHandler -Key Tab -Function MenuComplete
-Set-PSReadlineKeyHandler -Key Alt+j -Function HistorySearchForward
-Set-PSReadlineKeyHandler -Key Alt+k -Function HistorySearchBackward
+Set-PSReadlineKeyHandler -Key Ctrl+p -Function HistorySearchForward
+Set-PSReadlineKeyHandler -Key Ctrl+n -Function HistorySearchBackward
 
 Import-Module -Name Terminal-Icons
 
