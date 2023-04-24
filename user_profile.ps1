@@ -3,8 +3,8 @@ Set-PSReadLineOption -PredictionSource History
 Set-PSReadLineOption -PredictionViewStyle ListView
 # Shows navigable menu of all options when hitting Tab
 # Set-PSReadlineKeyHandler -Key Tab -Function MenuComplete
-Set-PSReadlineKeyHandler -Key Ctrl+p -Function HistorySearchForward
-Set-PSReadlineKeyHandler -Key Ctrl+n -Function HistorySearchBackward
+Set-PSReadlineKeyHandler -Key Ctrl+n -Function HistorySearchForward
+Set-PSReadlineKeyHandler -Key Ctrl+p -Function HistorySearchBackward
 
 Import-Module -Name Terminal-Icons
 
@@ -20,4 +20,24 @@ function which ($command) {
 
 function ll() {
     Get-ChildItem | Format-Wide
+}
+
+function nvims()
+{
+  $items = "Default", "NvChad", "AstroNvim", "LazyVim"
+  $config = $items | fzf --prompt=" Neovim Config  " --height=~50% --layout=reverse --border --exit-0
+
+  if ([string]::IsNullOrEmpty($config))
+  {
+    Write-Output "Nothing selected"
+    break
+  }
+ 
+  if ($config -eq "Default")
+  {
+    $config = ""
+  }
+
+  $env:NVIM_APPNAME=$config
+  nvim $args
 }
