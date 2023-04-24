@@ -3,7 +3,7 @@
 ## Powershell Setup
 
 * Clone this repository
-```git
+```sh
 git clone https://github.com/Alexis12119/powershell.git .config\powershell
 ```
 **NOTE:** Put `nightly.omp.json` in the `$env:POSH_THEMES_PATH`
@@ -12,70 +12,70 @@ git clone https://github.com/Alexis12119/powershell.git .config\powershell
 
 **NOTE:** Use Only [PowerShell](https://github.com/PowerShell/PowerShell) (version 5.1 or later). 
 
-```sh
+```ps1
  Set-ExecutionPolicy RemoteSigned -Scope CurrentUser # Optional: Needed to run a remote script the first time
 ```
 
-```sh
+```ps1
 irm get.scoop.sh | iex
 ```
 
 * [Git for Windows](https://gitforwindows.org/) - Version Control
 
-```sh
+```ps1
 scoop bucket add main
 ```
 
-```sh
+```ps1
 scoop install git
 ```
 
 * [Oh My Posh](https://ohmyposh.dev/) - Prompt theme engine
 
-```sh
+```ps1
 scoop bucket add main
 ```
 
-```sh
+```ps1
 scoop install oh-my-posh
 ```
 
 * [Terminal Icons](https://github.com/devblackops/Terminal-Icons) - Folder and file icons
 
-```sh
+```ps1
 scoop bucket add extras
 ```
 
-```sh
+```ps1
 scoop install terminal-icons
 ```
 
 * [PSReadLine](https://docs.microsoft.com/en-us/powershell/module/psreadline/?view=powershell-7.2) - Cmdlets for customizing the editing environment, used for autocompletion
 
-```sh
+```ps1
 scoop bucket add extras
 ```
 
-```sh
+```ps1
 scoop install psreadline
 ```
 
 * [z](https://www.powershellgallery.com/packages/z/1.1.13) - Directory jumper
 
-```sh
+```ps1
 scoop bucket add extras
 ```
 
-```sh
+```ps1
 scoop install z
 ```
 
 * [PSFzf](https://github.com/kelleyma49/PSFzf) - Fuzzy finder
 
-```sh
+```ps1
 scoop bucket add extras
 ```
 
-```sh
+```ps1
 scoop install psfzf
 ```
