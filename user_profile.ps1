@@ -24,7 +24,7 @@ function ll() {
 
 function nvims()
 {
-  $items = "Default", "NvChad", "AstroNvim", "LazyVim"
+  $items = "Default", "NvChad", "AstroNvim", "LazyVim", "kickstart"
   $config = $items | fzf --prompt=" Neovim Config  " --height=~50% --layout=reverse --border --exit-0
 
   if ([string]::IsNullOrEmpty($config))
