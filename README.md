@@ -4,7 +4,7 @@
 
 * Clone this repository
 ```sh
-git clone https://github.com/Alexis12119/powershell.git .config\powershell
+git clone https://github.com/Alexis12119/powershell.git Documents\Powershell
 ```
 **NOTE:** Put `nightly.omp.json` in the `$env:POSH_THEMES_PATH`
 
