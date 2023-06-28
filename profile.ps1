@@ -6,10 +6,7 @@ Set-PSReadLineOption -PredictionViewStyle ListView
 Set-PSReadlineKeyHandler -Key Ctrl+n -Function HistorySearchForward
 Set-PSReadlineKeyHandler -Key Ctrl+p -Function HistorySearchBackward
 
-# Import-Module -Name Terminal-Icons
-
-# Import-Module PSFzf
-# Set-PsFzfOption -PSReadlineChordProvider 'Ctrl+f' -PSReadlineChordReverseHistory 'Ctrl+r'
+Import-Module -Name Terminal-Icons
 
 oh-my-posh init pwsh --config "$env:POSH_THEMES_PATH\nightly.omp.json" | Invoke-Expression
 
