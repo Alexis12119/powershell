@@ -69,13 +69,3 @@ scoop bucket add extras
 ```ps1
 scoop install z
 ```
-
-* [PSFzf](https://github.com/kelleyma49/PSFzf) - Fuzzy finder
-
-```ps1
-scoop bucket add extras
-```
-
-```ps1
-scoop install psfzf
-```
