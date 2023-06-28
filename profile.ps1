@@ -6,12 +6,27 @@ Set-PSReadLineOption -PredictionViewStyle ListView
 Set-PSReadlineKeyHandler -Key Ctrl+n -Function HistorySearchForward
 Set-PSReadlineKeyHandler -Key Ctrl+p -Function HistorySearchBackward
 
-Import-Module -Name Terminal-Icons
+# Import-Module -Name Terminal-Icons
 
-Import-Module PSFzf
-Set-PsFzfOption -PSReadlineChordProvider 'Ctrl+f' -PSReadlineChordReverseHistory 'Ctrl+r'
+# Import-Module PSFzf
+# Set-PsFzfOption -PSReadlineChordProvider 'Ctrl+f' -PSReadlineChordReverseHistory 'Ctrl+r'
 
 oh-my-posh init pwsh --config "$env:POSH_THEMES_PATH\nightly.omp.json" | Invoke-Expression
+
+# Open files from fzf
+function f {
+  # Define the command to invoke fzf and select a file
+  $fzfCommand = "fzf --preview 'bat --color=always {}'"
+
+  # Invoke fzf and capture the selected file
+  $selectedFile = Invoke-Expression -Command $fzfCommand
+
+  # Check if a file was selected
+  if ($selectedFile) {
+      # Open the selected file in neovim
+      nvim $selectedFile
+  }
+}
 
 function which ($command) {
     Get-Command -Name $command -ErrorAction SilentlyContinue |
