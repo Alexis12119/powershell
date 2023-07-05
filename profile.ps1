@@ -10,8 +10,24 @@ Import-Module -Name Terminal-Icons
 
 oh-my-posh init pwsh --config "$env:POSH_THEMES_PATH\nightly.omp.json" | Invoke-Expression
 
+# Change Directory through fd
+function cdr {
+  # Define the command to invoke fzf and select a directory
+  $fzfCommand = "fd --type d . --hidden --exclude .git --exclude .vscode --exclude node_modules | fzf"
+
+  # Invoke fzf and capture the selected directory
+  $selectedDirectory = Invoke-Expression -Command $fzfCommand
+
+  # Check if a directory was selected
+  if ($selectedDirectory) {
+    # Change the current directory to the selected directory
+    Set-Location $selectedDirectory
+  }
+}
+
 # Open files from fzf
-function f {
+function f
+{
   # Define the command to invoke fzf and select a file
   $fzfCommand = "fzf --preview 'bat --color=always {}'"
 
@@ -19,19 +35,22 @@ function f {
   $selectedFile = Invoke-Expression -Command $fzfCommand
 
   # Check if a file was selected
-  if ($selectedFile) {
-      # Open the selected file in neovim
-      nvim $selectedFile
+  if ($selectedFile)
+  {
+    # Open the selected file in neovim
+    nvim $selectedFile
   }
 }
 
-function which ($command) {
-    Get-Command -Name $command -ErrorAction SilentlyContinue |
-        Select-Object -ExpandProperty Path -ErrorAction SilentlyContinue
+function which ($command)
+{
+  Get-Command -Name $command -ErrorAction SilentlyContinue |
+    Select-Object -ExpandProperty Path -ErrorAction SilentlyContinue
 }
 
-function ll() {
-    Get-ChildItem | Format-Wide
+function ll()
+{
+  Get-ChildItem | Format-Wide
 }
 
 function nvims()
