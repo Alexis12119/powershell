@@ -13,7 +13,7 @@ oh-my-posh init pwsh --config "$env:POSH_THEMES_PATH\nightly.omp.json" | Invoke-
 # Change Directory through fd
 function cdr {
   # Define the command to invoke fzf and select a directory
-  $fzfCommand = "fd --type d . --hidden --exclude .git --exclude .vscode --exclude node_modules | fzf"
+  $fzfCommand = "fd --type d . --hidden --exclude .git --exclude .vscode --exclude node_modules | fzf  --prompt=' Choose Dir: ' --layout=reverse --border=sharp --exit-0"
 
   # Invoke fzf and capture the selected directory
   $selectedDirectory = Invoke-Expression -Command $fzfCommand
@@ -29,7 +29,7 @@ function cdr {
 function f
 {
   # Define the command to invoke fzf and select a file
-  $fzfCommand = "fzf --preview 'bat --color=always {}'"
+  $fzfCommand = "fzf --prompt='󰈚 Choose File: ' --layout=reverse --border --preview 'bat --color=always {}' --exit-0"
 
   # Invoke fzf and capture the selected file
   $selectedFile = Invoke-Expression -Command $fzfCommand
@@ -41,6 +41,7 @@ function f
     nvim $selectedFile
   }
 }
+
 
 function which ($command)
 {
