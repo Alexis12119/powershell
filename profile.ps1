@@ -9,7 +9,7 @@ Set-PSReadlineKeyHandler -Key Ctrl+p -Function HistorySearchBackward
 Import-Module -Name Terminal-Icons
 
 # oh-my-posh init pwsh --config "$env:POSH_THEMES_PATH\nightly.omp.json" | Invoke-Expression
-oh-my-posh init pwsh --config "$env:POSH_THEMES_PATH\bubblesline.omp.json" | Invoke-Expression
+oh-my-posh init pwsh --config "$env:POSH_THEMES_PATH\star.omp.json" | Invoke-Expression
 
 # Change Directory through fd
 function cdr {
