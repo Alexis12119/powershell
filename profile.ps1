@@ -27,7 +27,7 @@ function cdr {
 }
 
 # Open files from fzf
-function f
+function ff
 {
   # Define the command to invoke fzf and select a file
   $fzfCommand = "fzf --prompt='󰈚 Choose File: ' --layout=reverse --border --preview 'bat --color=always {}' --exit-0"
